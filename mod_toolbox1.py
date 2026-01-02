@@ -40,3 +40,25 @@ def factors(n):
         if n%div1==0:
             list2.append(div1)
     return list2
+
+def getPrimes(maxNumber):
+    list1=[1,2,3]
+    num1=4
+    isPrime=True
+    if num1%2==0:
+        isPrime=False
+            
+    if isPrime==True:
+        list1.append(num1)
+        print(list1)
+
+    for j in range(5,maxNumber,1):
+        num1=j
+        isPrime=True
+        for i in range(2,j,1):
+            if num1%i==0:
+                isPrime=False
+        if isPrime==True:
+            list1.append(num1)
+    return list1
+
